@@ -4,7 +4,18 @@ var isAnagram = function(s, t){
     let mapB = mapMaker(t)
 
 
-    
+    if(Object.keys(mapA).length !== Object.keys(mapB).length){
+        return false 
+    }
+
+    for(let char in mapA){
+        if(mapA[char] !== mapB[char]){
+            return false 
+        }
+    }
+
+    return true 
+
 
 }
 
