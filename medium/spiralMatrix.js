@@ -51,4 +51,6 @@ function generateMatrix(n) {
     }
     startCol++;
   }
+
+  return result;
 }

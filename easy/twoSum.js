@@ -17,3 +17,25 @@
 
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
+
+function twoSum(nums, target) {
+  let results = [];
+
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left < right) {
+    let currentSum = nums[left] + nums[right];
+
+    if (currentSum === target) {
+      results.push(left);
+      results.push(right);
+    } else if (currentSum > target) {
+      right--;
+    } else if (currentSum < target) {
+      left++;
+    }
+  }
+
+  return results;
+}
