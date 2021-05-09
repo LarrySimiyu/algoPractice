@@ -10,13 +10,8 @@
 
 // rotate 3 steps to the right: [5,6,7,1,2,3,4]
 function rotateArray(nums, k) {
-  let count = 0;
+  let k = k % nums.length 
 
-  while (count !== k) {
-    let currentVal = nums.pop();
-    nums.unshift(currentVal);
-    count++;
-  }
+  
 
-  return nums;
 }
