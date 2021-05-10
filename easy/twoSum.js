@@ -19,22 +19,20 @@
 // Output: [0,1]
 
 function twoSum(nums, target) {
-
   // Input: nums = [2,7,11,15], target = 9
   // check if element is in the map
   // push the different of target - current -> 9 - 2 = 7
   // map = { 7:0 } -> this is the difference and its index
 
-  
-  const map = new Map();
-  // look up speed in map is O(1)
-  for(let i = 0; i < nums.length; i++){
-    let currVal = nums[i]
+  let map = new Map();
 
-    if(map.has(currVal)){ // we find the diff that adds up to target
-      return [map.get(currVal), i]
+  for (let i = 0; i < nums.length; i++) {
+    let currenVal = nums[i];
+
+    if (map.has(currentVal)) {
+      return [map.get(currentVal), i];
     }
-    let diff = target - currVal;
-    map.set(diff, i)
-  };
+    let diff = target - currenVal;
+    map.set(diff, i);
+  }
 }
